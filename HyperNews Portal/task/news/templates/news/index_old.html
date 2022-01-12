@@ -1,0 +1,10 @@
+<html>
+  <body>
+    {% for new in news %}
+      <h2>{{new.title}}</h2>
+      <p>{{new.created}}</p>
+      <p>{{new.text}}</p>
+      <div>Comment #{{ forloop.counter }}: {{ new.link }}</div>
+    {% endfor %}
+  </body>
+</html>

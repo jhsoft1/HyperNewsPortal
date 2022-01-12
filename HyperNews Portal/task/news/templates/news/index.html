@@ -1,0 +1,14 @@
+<html>
+  <body>
+      <h2>Hyper news</h2>
+      {% for date in grouped_news %}
+        <h4>{{date.date}}</h4>
+        <ul>
+        {% for new in date.values %}
+            <li><a target="_blank" href="/news/{{ new.link }}/">{{new.title}}</a></li>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+      <a target="_blank" href="/news/create/"></a>
+  </body>
+</html>
